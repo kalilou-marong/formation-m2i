@@ -21,8 +21,8 @@ function myFunctionAlert(arg) {
     case 0: alert("Page chargée."); break;
     case 1: alert("Vous avez cliqué sur le bouton 1."); break;
     case 2: alert("Vous avez survolé le bouton 2."); break;
-    case 3: alert("Vous avez cliqué 2 fois sur le bouton 3.");break;
-    case 4: alert("Vous n'avez plus le focus sur le bouton 4.");break;
+    case 3: alert("Vous avez cliqué 2 fois sur le bouton 3."); break;
+    case 4: alert("Vous n'avez plus le focus sur le bouton 4."); break;
   }
 }
 
@@ -39,7 +39,8 @@ const listeKeycode = touches.map(touche => touche.dataset.key);
 // Ecouteur évenement Keydown
 document.addEventListener('keydown', (e) => {
   const valeur = e.key.toString();
-  alert(valeur);
+  if(e.key.toString() ==="Enter")
+    alert("Vous avez appuyé sur la touche " + valeur);
 })
 
 // Ecouteur évenement click
