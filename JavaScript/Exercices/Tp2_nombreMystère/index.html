@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <title>Tp2 - Nombre mystère</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">TP2 - Nombre mystère</h1>
+            <hr>
+        </div>
+
+        <div class="p-3 mb-2 bg-danger text-white">
+            <h2>Le nombre mystère</h2>
+            <div class="lead" id="result">
+                <p>J'ai généré un nombre aléatoire entre 1 et 50</p>
+                <p>Essayez de le deviner en proposant ci-dessous</p>
+            </div>
+            
+            <div id="coups">
+            </div>
+            <div class="saisie">
+                <input type="number" id="number">
+                <input type="button" value="Valider" class="btn btn-secondary" onclick="demanderUnNombre()">
+            </div>
+            <DIV>
+                <input type="button" value="Rejouer" class="btn btn-secondary">
+            </DIV>
+        </div>
+    </div>
+
+    </div>
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
