@@ -9,34 +9,41 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        
-    <!-- Integrating Favicon -->
+    <!-- import favicon -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <title>EXERCICE09 - LES VARIABLES - Calcul Taux Intérêts</title>
+    <title>EXERCICE17 - IfElse - Calcul Impôts</title>
 </head>
 
 <body>
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">EXERCICE09 - Les Variables et Opérateurs Arithmetiques - Calcul taux intérêts</h1>
+            <h1 class="display-4">EXERCICE17 - LES STRUCTURES CONDITIONNELLES - Quel montant dois-je payer...?</h1>
             <hr>
-            <p class="lead">Création et utilisation des<mark> Les Variables et Opérateurs Arithmetiques </mark> en
-                <mark>Javascript</mark>
+            <p class="lead">Création et utilisation des<mark> Structures Conditionnelles </mark> en<mark> Javascript
+                </mark>
             </p>
         </div>
 
+
         <div class="lead" id="result">
             <form action="">
-                <label for="" >Saisir votre capital initial</label>
-                <input type="number" id="capital">
-                <label for="" >Saisir le taux d'intérêts</label>
-                <input type="number" id="interets">
-                <label for="" >Saisir la durée de l'épargne</label>
-                <input type="number" id="epargne">
-                <input type="button" onclick="calculInteret()" class="btn btn-primary btn-lg" value="valider">
+                <label for="">
+                    Montant total des revenus du foyer
+                </label>
+                <input type="number" name="" id="revenus">
+                <label for="">
+                    Nombre d'adultes
+                </label>
+                <input type="number" name="" id="nbAdulte">
+                <label for="">
+                    Nombres d'enfants
+                </label>
+                <input type="number" name="" id="nbEnfants">
+                <input type="button" onclick="calculImpots()" class="btn btn-primary" value="Valider">
             </form>
         </div>
+
     </div>
 
 
