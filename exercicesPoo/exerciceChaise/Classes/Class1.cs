@@ -8,20 +8,10 @@ namespace exerciceChaise.Classes
 {
     internal class Chaise
     {
-        private int nbPieds;
-        private string materiaux;
-        private string couleur;
+        public int nbPieds {get; set};
+        public string materiaux {get; set};
+        public string couleur {get; set};
 
-        public Chaise (int NbPieds, string Materiaux, string Couleur)
-        {
-            this.nbPieds = NbPieds;
-            this.materiaux = Materiaux;
-            this.couleur = Couleur;
-        }
-
-        public int Nbpieds { get => nbPieds; set => nbPieds = value; }
-        public string Materiaux { get => materiaux; set => materiaux = value; }
-        public string Couleur { get => couleur; set => couleur = value; }
 
     }
 }

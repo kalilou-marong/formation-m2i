@@ -6,15 +6,41 @@ using System.Threading.Tasks;
 
 namespace laPile.Classes
 {
-    internal class Pile
+    internal class Pile<T>
     {
-        private List<string> tableau;
+        private T[] elements;
+        private int count;
 
-        public List<string> Tableau  { get => tableau; set => tableau = value; }
-
-        public void empiler ()
+        public Pile(int taille)
         {
-            Tableau.Add();
+            elements = new T[taille];
+            count = 0;
+        }
+
+        public void Empiler(T element)
+        {
+           if (count < elements.Length) 
+            {
+                elements[count++] = element;
+            }
+        }
+
+        public void Depiler() 
+        { 
+            if(count > 0)
+            {
+                count--;
+                elements[count] = default(T);
+            }
+        }
+
+        public T Get(int index)
+        {
+            if (index >= 0 && index < count)
+            {
+                return elements[index];
+            }
+            return default(T);
         }
 
     }
