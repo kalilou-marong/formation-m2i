@@ -18,6 +18,7 @@ namespace ExerciceHotel.Classes
         public string Prenom { get => prenom; set => prenom = value; }
         public string Telephone { get => telephone; set => telephone = value; }
 
+        public int Id { get => id; }
         public Client(string nom, string prenom, string telephone)
         {
             id = ++compteur;

@@ -8,6 +8,7 @@ namespace ExerciceHotel.Classes
 {
     public class Chambre
     {
+        private static int compteur = 0;
         private int numero;
         private decimal tarif;
         private int nb_personne;
@@ -18,12 +19,23 @@ namespace ExerciceHotel.Classes
 
         public StatutChambre Statut { get; set; }
 
-    }
+        public Chambre(decimal tarif, int nb)
+        {
+            numero = ++compteur;
+            Tarif = tarif;
+            Nb_personne = nb;
+            Statut = StatutChambre.Libre;
+        }
 
+        
+
+    }
     public enum StatutChambre
     {
         Libre,
         Occupe,
         Nettoyage
     }
+
+
 }
