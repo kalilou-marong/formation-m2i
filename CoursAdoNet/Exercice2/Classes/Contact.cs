@@ -33,7 +33,7 @@ namespace Exercice2.Classes
 
         public bool Save()
         {
-            request = "INSERT INTO annuaire (nom, prenom, n_classe, date_diplome) OUTPUT INSERTED.id values (@nom, @prenom, @telephone)";
+            request = "INSERT INTO annuaire (nom, prenom, telephone) OUTPUT INSERTED.id values (@nom, @prenom, @telephone)";
             command = new SqlCommand(request, connection);
             command.Parameters.Add(new SqlParameter("@nom", Nom));
             command.Parameters.Add(new SqlParameter("@prenom", Prenom));
@@ -64,7 +64,7 @@ namespace Exercice2.Classes
         public static Contact GetContact(string nom)
         {
             Contact contact = null;
-            request = "SELECT nom, prenom, telephone from annuaire where id = @id";
+            request = "SELECT nom, prenom, telephone from annuaire where nom = @nom";
 
             connection.Open();
             command = new SqlCommand(request, connection);
